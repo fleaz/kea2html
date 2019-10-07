@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>KEA4 DHCP Leases</title>
+</head>
+<body>
+ <table style="width:80%">
+  <tr>
+    <th>Hostname</th>
+    <th>MAC</th>
+    <th>Expire</th>
+    <th>IPv4</th>
+  </tr>
+{{ range . }}
+  <tr>
+	  <td>{{ .Hostname }}</td>
+	  <td>{{ .MAC }}</td>
+	  <td>{{ .Expire }}</td>
+	  <td>{{ .IPv4 }}</td>
+  </tr>
+{{ end }}
+</table> 
+</body>
